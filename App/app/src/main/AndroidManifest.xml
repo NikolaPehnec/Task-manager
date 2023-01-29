@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hr.fer.projekt.taskmanager">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="hr.fer.projekt.taskmanager.alarm.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".view.ui.main.MainActivity" />
+        <activity android:name=".view.CalendarActivitiy" />
+        <activity
+            android:name=".view.ui.main.ZadatakDetailActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".view.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <receiver android:name="hr.fer.projekt.taskmanager.alarm.AlarmBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="hr.fer.projekt.taskmanager.alarm.RingActivity" />
+
+        <service android:name="hr.fer.projekt.taskmanager.alarm.AlarmService" />
+        <service android:name="hr.fer.projekt.taskmanager.alarm.RescheduleAlarmsService" />
+    </application>
+
+</manifest>

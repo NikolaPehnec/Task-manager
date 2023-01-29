@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/novi_popis"
+            android:title="Novi popis" />
+        <item
+            android:id="@+id/izbrisi_popis"
+            android:title="Izbriši trenutni popis" />
+        <item
+            android:id="@+id/grupe"
+            android:title="Pregled grupa" />
+    </group>
+</menu>

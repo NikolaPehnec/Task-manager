@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:minWidth="640dp"
+    android:orientation="vertical"
+    android:paddingBottom="12dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/zadatak_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorWhite"
+                        android:hint="Zadatak"
+                        android:inputType="textCapSentences"
+                        android:textSize="18sp">
+
+
+                    </EditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerPopis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/opisTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/opisEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:hint="Opis"
+                    android:inputType="textCapSentences" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOpis"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="sans-serif"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Opis"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    app:shapeAppearanceOverlay="@style/buttomShape" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGrupa"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="sans-serif"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Grupa"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    app:shapeAppearanceOverlay="@style/buttomShape" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVrijeme"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="sans-serif"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Vrijeme"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    app:shapeAppearanceOverlay="@style/buttomShape" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grupaLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerGrupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/datumVrijemeSV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_linear_layout"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Datum i vrijeme"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/pocetni_datum_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Datum: "
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/pocetno_vrijeme_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vrijeme: "
+                        android:textColor="@color/colorBlack" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchPonovi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ponovi"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutObavijesti"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <Spinner
+                            android:id="@+id/spinnerVremena"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/unos_lijeka"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerVremena"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Ukupno trajanje"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/odredeno_rb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="Određeni broj dana: 1" />
+
+                            <RadioButton
+                                android:id="@+id/neprekidno_rb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Neprekidno" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dani u tjednu"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/svaki_dan_rb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="Svaki dan u tjednu" />
+
+                            <RadioButton
+                                android:id="@+id/odredeni_dani_rb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Određeni dani: " />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnZapisi"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Spremi"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                app:shapeAppearanceOverlay="@style/buttomShape"
+                app:strokeColor="@color/colorPrimary" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

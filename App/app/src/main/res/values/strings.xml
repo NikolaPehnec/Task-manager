@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Task manager</string>
+    <string name="title_text">Task manager</string>
+    <string name="login_user_default_text">Korisničko ime</string>
+    <string name="login_password_default_text">Lozinka</string>
+    <string name="login_button_text">Prijava</string>
+    <string name="user_data_text">Podaci korisnika</string>
+    <string name="text_logout">Odjava</string>
+    <string name="login_title_text">Task manager</string>
+
+    <string-array name="unos_lijeka">
+        <item>1 puta dnevno</item>
+        <item>2 puta dnevno</item>
+        <item>3 puta dnevno</item>
+        <item>4 puta dnevno</item>
+        <item>5 puta dnevno</item>
+        <item>6 puta dnevno</item>
+        <item>7 puta dnevno</item>
+        <item>8 puta dnevno</item>
+        <item>9 puta dnevno</item>
+        <item>10 puta dnevno</item>
+        <item>11 puta dnevno</item>
+        <item>12 puta dnevno</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_xxxx">Tab 2</string>
+    <string name="drawer_open">Otvoreni meni</string>
+    <string name="drawer_closed">Zatvoreni meni</string>
+
+</resources>

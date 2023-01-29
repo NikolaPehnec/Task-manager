@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/popis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Popis: "
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerPopis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toEndOf="@+id/popis"
+            app:layout_constraintTop_toTopOf="@+id/popis" />
+
+        <TextView
+            android:id="@+id/grupa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Grupa: "
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popis" />
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerGrupa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/grupa"
+            app:layout_constraintStart_toEndOf="@+id/grupa"
+            app:layout_constraintTop_toTopOf="@+id/grupa" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grupa">
+
+            <EditText
+                android:id="@+id/zadatak_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/colorWhite"
+                android:hint="Zadatak"
+                android:inputType="text"
+                android:textSize="18sp">
+
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+            <EditText
+                android:id="@+id/opis_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/colorWhite"
+                android:hint="Opis"
+                android:inputType="text"
+                android:textSize="18sp">
+
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/calendarImage"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+            app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+
+        <ImageView
+            android:id="@+id/repeatImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/calendarImage"
+            app:srcCompat="@drawable/ic_baseline_repeat_24" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDatum"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="21/12/2022  13:00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/calendarImage"
+            app:layout_constraintStart_toEndOf="@+id/calendarImage"
+            app:layout_constraintTop_toTopOf="@+id/calendarImage"
+            app:layout_constraintVertical_bias="0.48000002"
+            app:shapeAppearanceOverlay="@style/buttomShape"
+            app:strokeColor="@color/colorPrimary" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPonovi"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="3 dana, svaki dan"
+            android:textColor="@color/colorPrimary"
+            android:textSize="11sp"
+            app:icon="@drawable/ic_close_black_18dp"
+            app:iconGravity="end"
+            app:iconPadding="8dp"
+            app:iconSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/repeatImage"
+            app:layout_constraintStart_toEndOf="@+id/repeatImage"
+            app:layout_constraintTop_toTopOf="@+id/repeatImage"
+            app:shapeAppearanceOverlay="@style/buttomShape"
+            app:strokeColor="@color/colorPrimary" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/pilFabZapisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/ic_baseline_save_24"
+        app:tint="@color/colorWhite" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/pilObrisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/colorRed"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/ic_baseline_delete_24"
+        app:tint="@color/colorWhite" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

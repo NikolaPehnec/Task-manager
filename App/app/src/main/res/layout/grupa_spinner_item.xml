@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+
+    <TextView
+        android:id="@+id/grupaPrioritet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/grupaNaziv"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Odgodivo:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_marginStart="16dp"
+        android:id="@+id/grupaBoja"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorRed" />
+
+</LinearLayout>
